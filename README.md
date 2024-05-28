@@ -1,6 +1,34 @@
-# Pokemon Trainers Backend
+# API de Gestión de Entrenadores Pokémon
 
-Este proyecto es el backend para una aplicación de gestión de entrenadores Pokémon. Utiliza Node.js con Express para manejar las solicitudes HTTP y MongoDB para almacenar los datos de los entrenadores.
+## Descripción
+
+Este proyecto proporciona una API para gestionar entrenadores Pokémon. Permite realizar operaciones CRUD (Crear, Leer, Actualizar, Eliminar) en la base de datos de entrenadores, así como descargar la lista de entrenadores en formato CSV. El backend está desarrollado utilizando Node.js, Express y MongoDB.
+
+## Características
+
+- **Crear Entrenador**: Agrega un nuevo entrenador a la base de datos.
+- **Leer Entrenadores**: Obtiene la lista completa de entrenadores o los detalles de un entrenador específico por ID.
+- **Actualizar Entrenador**: Modifica los datos de un entrenador existente.
+- **Eliminar Entrenador**: Elimina un entrenador de la base de datos.
+- **Descargar CSV**: Permite descargar la lista de entrenadores en formato CSV.
+
+## Estructura del Proyecto
+
+```plaintext
+.
+├── controllers
+│   └── trainersController.js
+├── models
+│   └── Trainer.schema.js
+├── routes
+│   └── trainers.js
+├── DB
+│   └── dbconnection.js
+├── .env
+├── main.js
+├── package.json
+└── README.md
+```
 
 ## Requisitos
 
