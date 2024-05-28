@@ -21,6 +21,11 @@ Este proyecto es el backend para una aplicación de gestión de entrenadores Pok
 
 ```bash
 git clone https://github.com/eduardoLOEZ/Trainers-Backend.git
+
+cd Trainers-Backend
+
+npm install
+
 ```
 ## Iniciar el servidor
 ```bash
