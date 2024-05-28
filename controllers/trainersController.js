@@ -77,13 +77,22 @@ export const deleteTrainer = async (req, res) => {
   }
 };
 
+// Descargar la lista de entrenadores en formato CSV
+//y enviar el Frontend
 export const downloadCSV = async (req, res) => {
   try {
     const trainers = await TrainerSchema.find();
+
+    // Definir los campos que queremos incluir en el CSV
     const fields = ["firstName", "lastName", "phoneNumber", "gymBadges"];
+
+    // Crear una instancia de Parser de la librería json2csv
     const json2csvParser = new Parser({ fields });
+
+    // Convertir los datos de entrenadores a formato CSV
     const csv = json2csvParser.parse(trainers);
 
+    // Configurar los encabezados de la respuesta para indicar que es un archivo CSV
     res.header("Content-Type", "text/csv");
     res.attachment("trainers.csv");
     res.send(csv);
