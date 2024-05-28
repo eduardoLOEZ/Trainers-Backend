@@ -80,12 +80,7 @@ export const deleteTrainer = async (req, res) => {
 export const downloadCSV = async (req, res) => {
   try {
     const trainers = await TrainerSchema.find();
-    const fields = [
-      "Nombre",
-      "apellidos",
-      "Número de teléfono",
-      "medallas de gimnasio obtenidas",
-    ];
+    const fields = ["firstName", "lastName", "phoneNumber", "gymBadges"];
     const json2csvParser = new Parser({ fields });
     const csv = json2csvParser.parse(trainers);
 
